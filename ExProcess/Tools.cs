@@ -10,6 +10,7 @@ namespace ExProcess
     class Tools
     {
         public static Dictionary<string,int> users;
+
         public static void prepareUsers()
         {
             users = new Dictionary<string,int>();

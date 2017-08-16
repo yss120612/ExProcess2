@@ -42,10 +42,11 @@ namespace ExProcess
             int pos=s.LastIndexOf('\\');
             if (pos < 0) return -1;
             string sresult = s.Substring(pos + 1, s.Length - pos-1);
-            if (users.ContainsKey(sresult)) return users[sresult];
-
-
-            //if (sresult.Contains("048BodyaginaTA")|| sresult.Contains("048GusevaOA") || sresult.Contains("048AsaulenkoVA"))
+            if (users.ContainsKey(sresult))
+            {
+                return users[sresult];
+            }
+                        //if (sresult.Contains("048BodyaginaTA")|| sresult.Contains("048GusevaOA") || sresult.Contains("048AsaulenkoVA"))
             //{
             //    return 1;
             //}

@@ -51,9 +51,13 @@ namespace ExProcess
             string _Password = appSettings.Get("FTP_Password");
             string _LogRotateMB = appSettings.Get("LOG_Rotate_MB");
 
- #endregion
+            #endregion
+
+            Tools.prepareUsers();
+            //if (1 == 1) return;
 
             long LOGMB;
+
             if (_LogRotateMB==null || !long.TryParse(_LogRotateMB, out LOGMB)|| LOGMB>100) LOGMB=1;
             string logfile = AppDomain.CurrentDomain.BaseDirectory + "\\ExProcess.log";
             FileInfo FI = new FileInfo(logfile);

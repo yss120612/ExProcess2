@@ -66,6 +66,7 @@ namespace ExProcess
             FI = new FileInfo(logfile);
             if (!FI.Exists) FI.Create();
 
+
             LOG=new StreamWriter(logfile, true , Encoding.UTF8);
 
             if (_Host == null || _Host == "" )
@@ -337,7 +338,6 @@ namespace ExProcess
 
         }
 
-
         private static bool checkPhase(string As, string At, string Rs, string Rt, string Cp, int phase)
         {
             if (As == null || As == "" || !Directory.Exists(As))//DRIVE C
@@ -369,7 +369,6 @@ namespace ExProcess
             }
             return true;
         }
-
 
         private static FTP Connect2FTP(string user, string pass, string host)
         {

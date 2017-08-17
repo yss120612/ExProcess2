@@ -98,6 +98,7 @@ namespace ExProcess
             
             FileInfo fi = new FileInfo(os_path_name);
             long fs = fi.Length;
+
             return fs == f.FileSize(ftp_path_name);
         }
     }
